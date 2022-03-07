@@ -1,4 +1,4 @@
-let tmp_arr = [];
+let tmp_arr = Array(9).fill('');
 const ans1 = document.querySelector('#ans1');
 const ans2 = document.querySelector('#ans2');
 const ans3 = document.querySelector('#ans3');
@@ -24,7 +24,7 @@ ans1.addEventListener('keydown',event=>{
    }
 })
 ans1.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);    
+    tmp_arr.splice(0,1,event.target.value);    
 })
 ans2.addEventListener('keydown',event=>{
     if(event.keyCode==8 || event.keyCode==37){
@@ -38,8 +38,7 @@ ans2.addEventListener('keydown',event=>{
     }
 })
 ans2.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);
-     
+    tmp_arr.splice(1,1,event.target.value);    
 })
 ans3.addEventListener('keydown',event=>{
     if(event.keyCode==8 || event.keyCode==37){
@@ -53,8 +52,7 @@ ans3.addEventListener('keydown',event=>{
     }
 })
 ans3.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);
-     
+    tmp_arr.splice(2,1,event.target.value);     
 })
 ans4.addEventListener('keydown',event=>{
     if(event.keyCode==8 || event.keyCode==37){
@@ -68,8 +66,7 @@ ans4.addEventListener('keydown',event=>{
     } 
 })
 ans4.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);
-     
+    tmp_arr.splice(3,1,event.target.value); 
 })
 ans5.addEventListener('keydown',event=>{
     if(event.keyCode==8 || event.keyCode==37){
@@ -83,8 +80,7 @@ ans5.addEventListener('keydown',event=>{
     } 
 })
 ans5.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);
-     
+    tmp_arr.splice(4,1,event.target.value);
 })
 ans6.addEventListener('keydown',event=>{
     if(event.keyCode==8 || event.keyCode==37){
@@ -98,8 +94,7 @@ ans6.addEventListener('keydown',event=>{
     } 
 })
 ans6.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);
-     
+    tmp_arr.splice(5,1,event.target.value); 
 })
 ans7.addEventListener('keydown',event=>{
     if(event.keyCode==8 || event.keyCode==37){
@@ -113,8 +108,7 @@ ans7.addEventListener('keydown',event=>{
     } 
 })
 ans7.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);
-     
+    tmp_arr.splice(6,1,event.target.value);
 })
 ans8.addEventListener('keydown',event=>{
     if(event.keyCode==8 || event.keyCode==37){
@@ -128,8 +122,7 @@ ans8.addEventListener('keydown',event=>{
     } 
 })
 ans8.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);
-     
+    tmp_arr.splice(7,1,event.target.value); 
 })
 ans9.addEventListener('keydown',event=>{
     if(event.keyCode==8 || event.keyCode==37){
@@ -143,7 +136,9 @@ ans9.addEventListener('keydown',event=>{
     } 
 })
 ans9.addEventListener('change',event=>{
-    tmp_arr.push(event.target.value);
+    tmp_arr.splice(8,1,event.target.value);
+    // console.log(tmp_arr.join(''));  
+    // 檢查結果用 
     let isSame = tmp_arr.join('') === 'alligator' || tmp_arr.join('') === 'crocodile';
     console.log(isSame);
     if(isSame){
